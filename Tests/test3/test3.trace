@@ -1,0 +1,4 @@
+Line = 1 A = 0 B = 0 PC = 0 SP = 0
+Line = 2 A = 75 B = 0 PC = 1 SP = 0
+Line = 3 A = 141 B = 0 PC = 2 SP = 0
+Line = 4 A = 141 B = 0 PC = 3 SP = 0

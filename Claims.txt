@@ -1,0 +1,166 @@
+/*****************************************************************************
+TITLE: Claims																																
+AUTHOR:  Atul Pande
+Roll Number: 2101CS88
+Declaration of Authorship
+This txt file, claims.txt, is part of the miniproject of CS209/CS210 at the 
+department of Computer Science and Engg, IIT Patna . 
+*****************************************************************************/
+
+Files:
+==========
+*All the files I submitted, asm.cpp and emu.cpp and claims.txt, have my name and student id at the start, along with a declaration of authorship.
+
+The evidence for Assembler including the output files from the 4  test examples and 2 algorithms has also been uploaded. They are test(memcpy)(2 output files), test1(2 output files), test2(1 output file) and test4(2 output files) and bubble(2 output file) and algo(Binary Search)(2 output file) . All the test files have been tested and work properly. As for the evidence for the emulator is uploaded with four output files, test(2 output files) , test3(2 output files) , bubble(2 output file) and algo(Binary Search)(2 output file).
+
+*Both of my c++ programs did not show any errors and warnings when I compiled them with g++ 
+*Two programs are compilable with g++ asm.cpp -o asm and g++ emu.cpp -o emu.
+
+
+=============================
+Program format and structure:
+=============================
+1. The assembler:
+
+    * with four data structures to store respectively labels,opcodes,operands and mnemonic table with expected operands.
+    * uses a single routine for both passes.
+    * detects label errors.
+    * Consistent and sensible formatting with sensible program structure. 
+    * sensible variable, function & type names with explanatory comments.
+    * creates the advanced listing file and binary file if no error occured.
+    * creates log file if an error occurs.
+    * assembles all 4 test programs.
+    * detects warnings like infinity loop and HALT not used.
+    * can implement and demonstrates the instruction SET (test3).
+
+2. The emulator :
+   
+    * with two data structures to store memory and opcodes with operands respectively.
+    * loads object file generated from assembler, 
+    * give options to create trace file or memory dump file or to exit loop.
+    * by giving option 1 trace file gets created.
+    * by giving option 2 memory file gets created.
+    * by giving option 3 program gets terminated.
+    * detects errant programs.
+    * detects HALT not used error and gives it in terminal
+
+
+=============================
+Testing:
+=============================
+
+1. The assembler:
+
+I have tested  4 examples shown below. The errors only occurred in the file test2.asm. 
+test1 and test3 executed with WARNINGS.
+
+The others were tested without any errors detected and produced two output files, listing file, 
+and machine-readable object file, for each example. 
+
+1)
+#Input: test1.asm
+#Output: 
+a. test1.l 
+b. test1.o
+
+2)
+#Input:test2.asm
+#Output:  
+a. test2.log
+
+error messages:
+Error on line 4 : Duplicate label definiton
+Error on line 7 : missing operand
+Error on line 8 : unexpected operand
+Error on line 9 : extra on end of line
+Error on line 10 : bogus label name
+Error on line 11 : bogus mnemonic
+Error on line 12 : bogus mnemonic
+Error on line 13 : no such label
+
+3)
+#Input:test3.asm
+#Output: 
+a. test3.l 
+b. test3.o
+
+
+4)
+#Input:test.asm
+#Output: 
+a. test.l 
+b. test.o
+
+
+2. The emulator:
+
+I have tested two examples shown below. The errors only occurred in the file test1.o and 
+the program immediately stopped. test3.o executed with warning of "WARNING: No HALT, exit program due to end of file"
+
+The others were tested without any errors detected and produced excution data both on the screen and 
+output text file for each example according to the usage instruction. 
+
+After running the bin file given, the trace data are the same as 
+the implemented result from my own program.
+
+1)
+#Input:test.o
+#Output: 
+a. test.trace
+b. test.memdump
+
+2)
+#Input:test3.o
+#Output: 
+a. test3.trace
+b. test3.memdump
+
+gives "WARNING: No HALT, exit program due to end of file"
+
+
+=============================
+Algorithm:
+=============================
+
+1. The assembler:
+
+I have tested 2 algorithms shown below.  
+
+They tested without any errors detected and produced two output files, listing file, 
+and machine-readable object file, for each example. 
+
+ 
+1)
+#Input: bubble.asm
+#Output: 
+a. bubble.l 
+b. bubble.o
+
+2)
+#Input:algo.asm
+#Output:  
+a. algo.l
+b. algo.o
+
+
+2. The emulator:
+
+I have tested two algoriths shown below.
+
+They were tested without any errors detected and produced excution data both on the screen and 
+output text file for each example according to the usage instruction. 
+
+After running the bin file given, the trace data are the same as 
+the implemented result from my own program.
+
+1)
+#Input:bubble.o
+#Output: 
+a. bubble.trace
+b. bubble.memdump
+
+2)
+#Input:algo.o
+#Output: 
+a. algo.trace
+b. algo.memdump
